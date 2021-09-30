@@ -23,6 +23,7 @@ namespace UserMaintenance
             label1.Text = Resource1.FullName;
             button1.Text = Resource1.Add;
             button2.Text = Resource1.Write;
+            button3.Text = Resource1.Delete;
 
             listBox1.DataSource = users;
             listBox1.ValueMember = "ID";
@@ -49,13 +50,13 @@ namespace UserMaintenance
 
             if (sfd.ShowDialog() != DialogResult.OK) return;
 
-           
+
             using (StreamWriter sw = new StreamWriter(sfd.FileName, false, Encoding.UTF8))
             {
                 // Végigmegyünk a hallgató lista elemein
                 foreach (var s in users)
                 {
-                    
+
                     sw.Write(s.ID);
                     sw.Write(";");
                     sw.Write(s.FullName);
@@ -64,6 +65,24 @@ namespace UserMaintenance
                 }
             }
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var guid = ((User)listBox1.SelectedItem).ID;
+                var törlendő = from x in users
+                               where x.ID == guid
+                               select x;
+                users.Remove((User)törlendő);
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Valami hiba történt!");
+              
+            }
         }
     }
 }
