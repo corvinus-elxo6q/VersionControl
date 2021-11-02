@@ -18,14 +18,11 @@ namespace Webszolaltatas
     {
 
         BindingList<RateData> Rates = new BindingList<RateData>();
-
-
         public Form1()
         {
             InitializeComponent();
 
             Webservice();
-            XMLProcess();
             ChartSettings();
 
             dataGridView1.DataSource = Rates.ToList();
@@ -65,10 +62,7 @@ namespace Webszolaltatas
             var response = mnbService.GetExchangeRates(request);
 
             var result = response.GetExchangeRatesResult;
-        }
 
-        public void XMLProcess()
-        {
             var xml = new XmlDocument();
             xml.Load(result);
             foreach (XmlElement element in xml.DocumentElement)
@@ -86,6 +80,7 @@ namespace Webszolaltatas
                 if (unit != 0)
                     rate.Value = value / unit;
             }
+
         }
     }
 }
