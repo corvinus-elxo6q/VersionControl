@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Gyartosor.Entities
 {
-    class Ball : Label
+    public class Ball : Label
     {
         public Ball()
         {
@@ -28,7 +28,7 @@ namespace Gyartosor.Entities
             g.FillEllipse(new SolidBrush(Color.Blue), 0, 0, Width, Height);
         }
 
-        private void MoveBall()
+        public void MoveBall()
         {
             Left++;
         }
