@@ -23,14 +23,11 @@ namespace Gyartosor.Entities
             DrawImage(e.Graphics);
         }
 
-        protected void DrawImage(Graphics g)
-        {
-            g.FillEllipse(new SolidBrush(Color.Blue), 0, 0, Width, Height);
-        }
+        protected abstract void DrawImage(Graphics g);
 
-        public void MoveBall()
+        public virtual void MoveToy()
         {
-            Left++;
+            Left += 1;
         }
     }
 }
