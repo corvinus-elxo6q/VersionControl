@@ -18,15 +18,22 @@ namespace Gyartosor.Entities
             Paint += Ball_Paint;
         }
 
-        private void Ball_Paint(object sender, PaintEventArgs e)
+        public SolidBrush BallColor { get; private set; }
+
+        public Ball(Color color)
         {
-            DrawImage(e.Graphics);
+            BallColor = new SolidBrush(color);
         }
 
         protected override void DrawImage(Graphics g)
         {
-            g.FillEllipse(new SolidBrush(Color.Blue), 0, 0, Width, Height);
+            g.FillEllipse(BallColor, 0, 0, Width, Height);
         }
+
+        private void Ball_Paint(object sender, PaintEventArgs e)
+        {
+            DrawImage(e.Graphics);
+        }       
 
         public void MoveBall()
         {
