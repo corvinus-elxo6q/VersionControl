@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Gyartosor.Entities
 {
-    public class Toy : Label
+    public abstract class Toy : Label
     {
         public Toy()
         {
