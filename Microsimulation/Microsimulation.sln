@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsimulation", "Microsimulation\Microsimulation.csproj", "{AF05B6E2-6BE6-4829-B79B-E27553B647CD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF05B6E2-6BE6-4829-B79B-E27553B647CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF05B6E2-6BE6-4829-B79B-E27553B647CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF05B6E2-6BE6-4829-B79B-E27553B647CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF05B6E2-6BE6-4829-B79B-E27553B647CD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {73D50339-8DC3-4711-B6E6-6489250F7E10}
+	EndGlobalSection
+EndGlobal
