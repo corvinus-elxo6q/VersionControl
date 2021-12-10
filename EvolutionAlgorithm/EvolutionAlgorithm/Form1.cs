@@ -32,6 +32,13 @@ namespace EvolutionAlgorithm
             int nbrOfSteps = 10;
             int nbrOfStepsIncrement = 10;
             int generation = 1;
+
+
+            for (int i = 0; i < populationSize; i++)
+            {
+                gc.AddPlayer(nbrOfSteps);
+            }
+            gc.Start();
         }
 
 
